@@ -1,0 +1,21 @@
+class Student {
+    int reg;
+    String name;
+    Student(int reg, String name) {
+        this.reg = reg;
+        this.name = name;
+    }
+
+    void display() {
+        System.out.println(reg + " " + name);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student(101, "JAna");
+        Student s2 = new Student(102, "Anu");
+
+        s1.display();
+        s2.display();
+    }
+}
