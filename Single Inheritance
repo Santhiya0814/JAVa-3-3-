@@ -1,0 +1,21 @@
+class Father {
+    int f_ass = 500000;  
+    void father() {
+        System.out.println("Father Assets: " + f_ass);
+    }
+}
+class Child extends Father {
+    int c_ass = 200000;
+    void child() {
+        int tot = f_ass + c_ass;
+        System.out.println("Child Assets: " + tot);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Child c = new Child();
+        
+        c.father();  
+        c.child();       
+    }
+}
