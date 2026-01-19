@@ -1,0 +1,25 @@
+CLASSES AND OBJECTS
+
+class Main {
+    public static void main(String[] args) {
+        Zomato r1=new Zomato();
+        r1.name="ABC Restaurent";
+        r1.food="Poori";
+        r1.price=40;
+        
+        Zomato r2= new Zomato();
+        r2.name="PQR Restaurent";
+        r2.food="Biryani";
+        r2.price=90;
+
+        r1.display();
+        r2.display();
+    }
+}class Zomato{
+    String name;
+    String food;
+    int price;
+    void display(){
+        System.out.println(name+"\n"+food + "-"+ price);
+    }
+}
