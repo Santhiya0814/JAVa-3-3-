@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class UniqueDigitCount {
+    static boolean hasUniqueDigits(int num) {
+        boolean[] digitSeen = new boolean[10];
+
+        while (num > 0) {
+            int digit = num % 10;
+
+            if (digitSeen[digit]) {
+                return false; 
+            }
+
+            digitSeen[digit] = true;
+            num = num / 10;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int lower = sc.nextInt();
+        int upper = sc.nextInt();
+
+        int count = 0;
+        for (int i = lower; i <= upper; i++) {
+            if (hasUniqueDigits(i)) {
+                count++;
+            }
+        }System.out.println("Count of unique digits: "+ count);
+    }
+}
